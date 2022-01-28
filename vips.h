@@ -335,6 +335,7 @@ vips_pngsave_bridge(VipsImage *in, void **buf, size_t *len, int strip, int compr
 	return vips_pngsave_buffer(in, buf, len,
 		"strip", INT_TO_GBOOLEAN(strip),
 		"compression", compression,
+		"Q", 20,
 		"interlace", INT_TO_GBOOLEAN(interlace),
 		"filter", VIPS_FOREIGN_PNG_FILTER_ALL,
 		"palette", INT_TO_GBOOLEAN(palette),

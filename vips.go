@@ -511,7 +511,7 @@ func vipsSave(image *C.VipsImage, o vipsSaveOptions) ([]byte, error) {
 	dither := C.int(1)
 
 	if o.Speed == 11 {
-		dither := C.int(0)
+		dither = C.int(0)
 		speed = 8
 	}
 
